@@ -21,6 +21,7 @@ public class ToDoItem: NSManagedObject {
     @NSManaged public var whenNum: Int32
     @NSManaged public var priorityNum: Int32
     @NSManaged public var isComplete: Bool
+    @NSManaged public var whenNumeric: Int32
 }
 
 
@@ -74,13 +75,13 @@ extension ToDoItem: Identifiable {
         }
     }
     
-//    var when: When {
-//        get {
-//            return When(rawValue: Int(whenNum)) ?? .later
-//        }
-//        
-//        set {
-//            self.whenNum = Int32(newValue.rawValue)
-//        }
-//    }
+    var when: When {
+        get {
+            return When(rawValue: Int(whenNumeric)) ?? .later
+        }
+        
+        set {
+            self.whenNumeric = Int32(newValue.rawValue)
+        }
+    }
 }

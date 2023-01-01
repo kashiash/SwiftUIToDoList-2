@@ -168,7 +168,7 @@ struct NewToDoView: View {
                     }
                     
                     self.isShow = false
-                    self.addTask(name: self.name ,when: self.when , priority: self.priority)
+                    self.addTask(name: self.name ,when: self.when, priority: self.priority)
                     
                 }) {
                     Text("Save")
